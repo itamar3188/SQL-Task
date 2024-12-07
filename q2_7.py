@@ -11,11 +11,11 @@ if __name__ == '__main__':
     cursor = mydb.cursor()
     cursor.execute("""
    CREATE TABLE IF NOT EXISTS customer (
-   customer_id VARCHAR(15),
+   customer_id VARCHAR(15) PRIMARY KEY,
    first_name VARCHAR(31) NOT NULL,
    last_name VARCHAR(31) NOT NULL,
    email VARCHAR(255) UNIQUE NOT NULL,
-   city_id INTEGER NOT NULL,
+   city_id INT NOT NULL,
    CHECK (LENGTH(customer_id) = 9)
     );
     """)
