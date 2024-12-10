@@ -10,11 +10,8 @@ if __name__ == '__main__':
     )
     cursor = mydb.cursor()
     cursor.execute("""
-    ALTER TABLE size
-    ADD COLUMN uk_number TINYINT
-    
-    UPDATE shoe_sizes
-    SET uk_number = us_number - 1;
+   ALTER TABLE size 
+   ADD COLUMN uk_number TINYINT;
         """)
     # !!! Commit the transaction to save the changes to the database !!!
     mydb.commit()

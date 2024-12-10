@@ -11,7 +11,7 @@ if __name__ == '__main__':
     cursor = mydb.cursor()
     cursor.execute("""
     INSERT INTO city(city_id, city_name, country_id) VALUES 
-        (1, 'Jerusalem', 1),
+(1, 'Jerusalem', 1),
 (2, 'Tel Aviv', 1),
 (3, 'Haifa', 1),
 (4, 'Toronto', 2),

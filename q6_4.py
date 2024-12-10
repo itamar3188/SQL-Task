@@ -10,8 +10,9 @@ if __name__ == '__main__':
     )
     cursor = mydb.cursor()
     cursor.execute("""
-   ALTER TABLE upcoming 
-   ADD COLUMN pre_order_available BIT DEFAULT 0;
+    UPDATE size
+    SET uk_number = 8
+    WHERE european_number = 42;
         """)
     # !!! Commit the transaction to save the changes to the database !!!
     mydb.commit()
