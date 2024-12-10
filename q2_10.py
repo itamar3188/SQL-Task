@@ -11,8 +11,8 @@ if __name__ == '__main__':
     cursor = mydb.cursor()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS order_customer(
-    customer_id VARCHAR(15),
     order_id INT,
+    customer_id VARCHAR(15),
     FOREIGN KEY(order_id) REFERENCES company_order(order_id),
     FOREIGN KEY(customer_id) REFERENCES customer(customer_id),
     PRIMARY KEY(order_id, customer_id)
