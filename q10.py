@@ -10,10 +10,10 @@ if __name__ == '__main__':
     )
     cursor = mydb.cursor()
     cursor.execute("""
-SELECT s.shoe_name, COUNT(si.us_number) AS available ?????
-FROM shoe s
-LEFT JOIN shoe_size sz ON s.shoe_id = sz.shoe_id
-LEFT JOIN size si ON si.size_id=sz.size_id
-GROUP BY s.shoe_id;
+(SELECT shoe_name AS name, 'Inventory' AS source
+from shoe)
+UNION
+(SELECT collection_name AS name, 'Upcoming Release' AS source
+FROM upcoming)
     """)
     print(', '.join(str(row) for row in cursor.fetchall()))
