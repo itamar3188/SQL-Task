@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Retrieve each customer's first and last name along with the total revenue they generated
     cursor.execute("""
 SELECT 
     cu.first_name,

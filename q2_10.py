@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create the 'order_customer' table to map orders to customers
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS order_customer(
     order_id INT,

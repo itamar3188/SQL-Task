@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Insert city details into the 'city' table
     cursor.execute("""
     INSERT INTO city(city_id, city_name, country_id) VALUES 
 (1, 'Jerusalem', 1),

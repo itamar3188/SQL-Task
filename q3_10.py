@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Map orders to customers in the 'order_customer' table
     cursor.execute("""
    INSERT INTO order_customer(order_id,customer_id) VALUES 
 (1, '123456789'), 

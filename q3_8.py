@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Insert order details into the 'company_order' table
     cursor.execute("""
    INSERT INTO company_order (order_id, order_date) VALUES     
 (1, '2025-01-15 14:30:00'), 

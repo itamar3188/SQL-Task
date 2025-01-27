@@ -9,12 +9,10 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
-    # Create the 'shoe' table to store details about shoes
+    # Retrieve the shoe name and the count of available sizes, including shoes with no sizes
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS shoe (
-    shoe_id INT PRIMARY KEY,
-    shoe_name VARCHAR(31) NOT NULL,
-    price SMALLINT NOT NULL
-    );
+SELECT sh.shoe_name
+    FROM shoe AS sh
+    WHERE sh.shoe_id NOT IN (SELECT DISTINCT os.shoe_id FROM order_shoe AS os);
     """)
     print(', '.join(str(row) for row in cursor.fetchall()))

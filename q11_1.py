@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create a view 'total_sales_per_shoe' to summarize total sales per shoe
     cursor.execute("""
     CREATE VIEW total_sales_per_shoe AS
     SELECT os.shoe_id, s.shoe_name, SUM(s.price) AS total_revenue

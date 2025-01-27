@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create the 'shoe_size' table to map shoes to available sizes
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS shoe_size (
     shoe_id INT NOT NULL,

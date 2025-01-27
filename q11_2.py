@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Query the view to display all data
     cursor.execute("""
      SELECT *
     FROM total_sales_per_shoe;

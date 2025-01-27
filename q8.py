@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Retrieve the European and US sizes with their average shoe price, ordered from highest to lowest average price
     cursor.execute("""
 SELECT s.european_number, s.us_number, AVG(sh.price) AS average_price
 FROM size s

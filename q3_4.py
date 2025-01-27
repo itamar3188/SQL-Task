@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Insert upcoming sneaker releases into the 'upcoming' table
     cursor.execute("""
     INSERT INTO upcoming (special_id, shoe_id, collection_name, release_date) VALUES
     (1, 1, 'Air Max Day 2025', '2025-03-26 10:00:00'), 

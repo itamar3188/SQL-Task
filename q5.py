@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Alter the 'upcoming' table to add a new column 'pre_order_available' of type BIT with a default value of 0
     cursor.execute("""
    ALTER TABLE upcoming 
    ADD COLUMN pre_order_available BIT DEFAULT 0;

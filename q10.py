@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Combine the shoe inventory with the upcoming releases, including a source column to indicate the origin
     cursor.execute("""
 (SELECT shoe_name AS name, 'Inventory' AS source
 from shoe)

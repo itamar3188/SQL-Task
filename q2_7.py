@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create the 'customer' table to store customer details
     cursor.execute("""
    CREATE TABLE IF NOT EXISTS customer (
    customer_id VARCHAR(15) PRIMARY KEY,

@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Alter the 'size' table to add a new column 'uk_number' of type TINYINT
     cursor.execute("""
    ALTER TABLE size 
    ADD COLUMN uk_number TINYINT;

@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Update the 'uk_number' to 9 for European size 43 in the 'size' table
     cursor.execute("""
     UPDATE size
     SET uk_number = 9

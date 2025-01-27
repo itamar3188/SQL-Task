@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Insert customer details into the 'customer'
     cursor.execute("""
     INSERT INTO customer (customer_id, first_name, last_name, email, city_id) VALUES 
 ('123456789', 'John', 'Doe', 'john.doe@example.com', 1),

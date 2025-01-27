@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create the 'size' table to store size information
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS size (
     size_id INT PRIMARY KEY,

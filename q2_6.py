@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create the 'city' table to store city information linked to countries
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS city(
     city_id INT PRIMARY KEY,

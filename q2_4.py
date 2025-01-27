@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create the 'upcoming' table to store upcoming sneaker releases
     cursor.execute("""
    CREATE TABLE IF NOT EXISTS upcoming(
    special_id INT PRIMARY KEY,

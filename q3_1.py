@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Insert shoe details into the 'shoe' table
     cursor.execute("""
     INSERT INTO shoe (shoe_id, shoe_name, price) VALUES 
 (1, 'Air CS 0/1', 150),

@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Create the 'country' table to store country information
     cursor.execute("""
    CREATE TABLE IF NOT EXISTS country(
    country_id INT PRIMARY KEY,

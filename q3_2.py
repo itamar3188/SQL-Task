@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # Insert size details into the 'size' table
     cursor.execute("""
 INSERT INTO size (size_id, european_number, us_number) VALUES
  (1, 38, 6), (2, 39, 7), (3, 40, 8), (4, 41, 9), (5, 42, 10),

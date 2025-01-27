@@ -12,4 +12,5 @@ if __name__ == '__main__':
     cursor.execute("""
     CREATE DATABASE IF NOT EXISTS biu_shoes;
     """)
+    # Create a new database named 'biu_shoes'
     print(', '.join(str(row) for row in cursor.fetchall()))
